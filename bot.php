@@ -50,10 +50,10 @@ if (!is_null($events['events'])) {
 else
 {
 	$job=$_GET["job"];
-
+	$user1=$_GET["user"];
 	if($job=="job01")
 	{
-		$user1=$_GET["user"];
+		
 		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";
 		$pushtext="ได้รับการแจ้งซ่อมจาก ".$user1;
 		$messages = [
