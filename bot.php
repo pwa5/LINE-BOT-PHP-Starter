@@ -52,9 +52,9 @@ else
 	$job=$_GET["job"];
 	if($job=="job01")
 	{
-
+		$test="1234";
 		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";
-		$pushtext="ได้รับแจ้งจาก ".$_GET["a"];
+		$pushtext="ได้รับแจ้งจาก ".$test."\n";
 		$messages = [
 						'type' => 'text',
 						'text' =>  $pushtext
