@@ -3,9 +3,9 @@ $access_token = 'sn22DbNDh+ShTleIlM7ZXIsiAckFnEelGwl79vpAZCu9A1HuoTEzx1nAr7vl/vx
 
 // Get POST body content
 $content = file_get_contents('php://input');
-$myfile = fopen("testfile.txt", "w");
-fwrite($myfile, $content);
-fclose($myfile);
+//$myfile = fopen("testfile.txt", "w");
+//fwrite($myfile, $content);
+//fclose($myfile);
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
@@ -63,7 +63,7 @@ else
 		$url = 'https://api.line.me/v2/bot/message/push';
 		$data = [
 			'to' => 'C5284c7dfc515bb45cbb338ae3be11356',
-			'messages' => $messages,
+			'messages' => $messages
 		];
 		$post = json_encode($data);
 		$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
