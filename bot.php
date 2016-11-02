@@ -54,7 +54,7 @@ else
 	{
 
 		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";
-		$pushtext="ได้รับแจ้งจาก ".$_GET["user1"];
+		$pushtext="ได้รับแจ้งจาก ".$_GET["a"];
 		$messages = [
 						'type' => 'text',
 						'text' =>  $pushtext
