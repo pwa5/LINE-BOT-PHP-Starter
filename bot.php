@@ -53,9 +53,9 @@ else
 
 	if($job=="job01")
 	{
-		$user=$_GET["user"];
+		$user1=$_GET["user"];
 		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";
-		$pushtext="ได้รับการแจ้งซ่อมจาก ".$user;
+		$pushtext="ได้รับการแจ้งซ่อมจาก ".$user1;
 		$messages = [
 						'type' => 'text',
 						'text' =>  $pushtext
@@ -63,7 +63,7 @@ else
 		// Make a POST Request to Messaging API to reply to sender
 		$url = 'https://api.line.me/v2/bot/message/push';
 		$data = [
-			'to' => 'C5284c7dfc515bb45cbb338ae3be11356',
+			'to' => 'C5284c7dfc515bb45cbb338ae3be11356', //
 			'messages' => [$messages],
 		];
 		$post = json_encode($data);
