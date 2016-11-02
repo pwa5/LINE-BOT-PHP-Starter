@@ -55,7 +55,7 @@ else
 	{
 		$user1=$_GET["user"];
 		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";
-		$pushtext="ได้รับการแจ้งซ่อมจาก $user1";
+		$pushtext="ได้รับการแจ้งซ่อมจาก";
 		$messages = [
 						'type' => 'text',
 						'text' =>  $pushtext
