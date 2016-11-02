@@ -55,15 +55,15 @@ else
 		$test="1234";
 		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";
 		$pushtext="ได้รับแจ้งจาก ".$test."\n";
-		$messages = [
+		$messages = [[
 						'type' => 'text',
 						'text' =>  $pushtext
-					];
+					]];
 		// Make a POST Request to Messaging API to reply to sender
 		$url = 'https://api.line.me/v2/bot/message/push';
 		$data = [
 			'to' => 'C5284c7dfc515bb45cbb338ae3be11356',
-			'messages' => [$messages],
+			'messages' => $messages,
 		];
 		$post = json_encode($data);
 		$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
