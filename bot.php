@@ -53,7 +53,7 @@ else
 	
 	if($job=="job01")
 	{
-		$user1=$_GET["user"];
+		//$user1=$_GET["user"];
 		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";
 		$pushtext="ได้รับการแจ้งซ่อมจาก";
 		$messages = [
