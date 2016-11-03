@@ -52,8 +52,7 @@ else
 	$job=$_GET["job"];
 	if($job=="job01")
 	{
-		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";
-		//$pushtext="ได้รับการแจ้งซ่อมจาก ".$_GET["user"]." อุปกรณ์  ".$_GET["equip"];
+		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";];
 		$pushtext="ได้รับการแจ้งซ่อมจาก ".$_GET["user"]." อุปกรณ์ ".$_GET["equip"];
 		$messages = [
 						'type' => 'text',
