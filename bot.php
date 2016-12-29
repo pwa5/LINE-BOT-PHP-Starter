@@ -76,6 +76,32 @@ else
 		curl_close($ch);
 		echo $result . "\r\n";
 	}
+	if($job=="job02")
+	{
+		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";];
+		$pushtext="ได้รับการแจ้งปัญหาทางคอมพิวเตอร์ รายการที่ ".$_GET["case"]." จาก ".$_GET["user1"]." เรื่อง ".$_GET["title"];
+		$messages = [
+						'type' => 'text',
+						'text' =>  $pushtext
+					];
+		// Make a POST Request to Messaging API to reply to sender
+		$url = 'https://api.line.me/v2/bot/message/push';
+		$data = [
+			'to' => 'C5284c7dfc515bb45cbb338ae3be11356',
+			'messages' => [$messages],
+		];
+		$post = json_encode($data);
+		$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+		$ch = curl_init($url);
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+		$result = curl_exec($ch);
+		curl_close($ch);
+		echo $result . "\r\n";
+	}
 }
 echo "OK";
 
