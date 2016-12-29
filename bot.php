@@ -79,7 +79,7 @@ else
 	if($job=="job02")
 	{
 		//$replytext="ตอบคุณ ".$sourceInfo['displayName']."\n";];
-		$pushtext="ได้รับการแจ้งปัญหาทางคอมพิวเตอร์ รายการที่ ".$_GET["case"]." จาก ".$_GET["user1"]." เรื่อง ".$_GET["title"];
+		$pushtext="ได้รับการแจ้งปัญหาทางคอมพิวเตอร์ รายการที่ ".$_GET["case"]." จาก ".$_GET["user1"]." เรื่อง ".$_GET["title1"];
 		$messages = [
 						'type' => 'text',
 						'text' =>  $pushtext
